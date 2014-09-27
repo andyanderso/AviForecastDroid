@@ -1,0 +1,217 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <LinearLayout
+            android:id="@+id/linearLayoutNavigationButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="#323232"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <com.sebnarware.avalanche.SegmentedRadioGroup
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:layout_margin="5dp"
+                android:checkedButton="@+id/buttonForecastObs"
+                android:orientation="horizontal">
+
+                <RadioButton android:id="@id/buttonForecastObs"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/radio_colors"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:button="@null"
+                    android:text="@string/button_forecasts"
+                    android:onClick="onNavClicked"  />
+
+                <RadioButton android:id="@+id/buttonSubmitObsObs"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/radio_colors"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:button="@null"
+                    android:text="@string/button_submit_obs"
+                    android:onClick="onNavClicked"
+                    android:checked="true" />
+
+                <RadioButton android:id="@+id/buttonDonateObs"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/radio_colors"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:button="@null"
+                    android:text="@string/button_donate"
+                    android:onClick="onNavClicked" />
+            </com.sebnarware.avalanche.SegmentedRadioGroup>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonPrefs"
+                android:background="@drawable/abc_ic_menu_moreoverflow_normal_holo_dark"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginRight="5dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayoutNavigationButtons"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Location Name:"
+                android:id="@+id/textViewLocName" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/editTextLocName"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Observation Type:"
+                android:id="@+id/textViewObsType" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:id="@+id/radioObType">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Avalanche"
+                    android:id="@+id/buttonAvalanche"
+                    android:checked="false"
+                    android:padding="5dp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Snowpack Observation"
+                    android:id="@+id/buttonSnowpack"
+                    android:padding="5dp"
+                    android:layout_marginLeft="20dp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Photos:"
+                android:id="@+id/textViewPhotos" />
+
+
+            <Button
+                android:text="@string/btnIntend"
+                android:id="@+id/btnIntend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp" />
+
+            <ImageView
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:visibility="visible"
+                android:id="@+id/imageView1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Description:"
+                android:id="@+id/textViewDesc" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences|textMultiLine"
+                android:ems="10"
+                android:id="@+id/editTextDesc"
+                android:lines="5"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit Observation"
+                android:id="@+id/buttonSend"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onSendClicked" />
+
+
+        </LinearLayout>
+<!--
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+            <Button android:text="@string/btnIntend" android:id="@+id/btnIntend"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+            <Button android:text="@string/btnIntendS" android:id="@+id/btnIntendS"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+            <Button android:text="@string/btnIntendV" android:id="@+id/btnIntendV"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>-->
+        <!--<ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/imageView1" />-->
+<!--        <VideoView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            android:id="@+id/videoView1" />-->
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,22 @@
+<resources>
+        <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- General settings -->
+    <string name="pref_header_general">General</string>
+
+
+    <string name="pref_title_default_avalanche_center">Default avalanche center</string>
+    <string-array name="pref_default_avalanche_center_titles">
+        <item>Sierra Avalanche Center</item>
+        <item>Mt. Shasta Avalanche Center</item>
+        <item>Utah Avalanche Center</item>
+    </string-array>
+    <string-array name="pref_default_avalanche_center_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>

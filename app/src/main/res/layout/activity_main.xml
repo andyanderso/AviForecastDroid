@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayoutNavigationButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="#323232"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp">
+
+
+
+        <com.sebnarware.avalanche.SegmentedRadioGroup
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:layout_margin="5dp"
+            android:checkedButton="@+id/buttonForecastMain"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@id/buttonForecastMain"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/radio_colors"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:button="@null"
+                android:text="@string/button_forecasts"
+                android:onClick="onNavClicked"
+                android:checked="true" />
+
+            <RadioButton android:id="@+id/buttonSubmitObsMain"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/radio_colors"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:button="@null"
+                android:text="@string/button_submit_obs"
+                android:onClick="onNavClicked" />
+
+            <RadioButton android:id="@+id/buttonDonateMain"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/radio_colors"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:button="@null"
+                android:text="@string/button_donate"
+                android:onClick="onNavClicked" />
+
+        </com.sebnarware.avalanche.SegmentedRadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayoutTimeframeModeButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="#B9B9B9"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp">
+
+		<ImageButton
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.5"
+		    android:visibility="invisible"
+		    android:scaleType="center"
+		    android:contentDescription="@string/empty" />
+
+
+		<com.sebnarware.avalanche.SegmentedRadioGroup
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="3"
+		    android:layout_margin="5dp"
+		    android:checkedButton="@+id/buttonToday"
+		    android:orientation="horizontal">
+
+		    <RadioButton android:id="@id/buttonToday"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:gravity="center"
+				android:textColor="@color/radio_colors"
+		        android:textAppearance="?android:attr/textAppearanceSmall"
+				android:button="@null"
+		        android:text="@string/button_today"
+		        android:onClick="setTimeframeToToday" />
+
+		    <RadioButton android:id="@+id/buttonTomorrow"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:gravity="center"
+				android:textColor="@color/radio_colors"
+		        android:textAppearance="?android:attr/textAppearanceSmall"
+				android:button="@null"
+		        android:text="@string/button_tomorrow"
+		        android:onClick="setTimeframeToTomorrow" />
+
+		   <RadioButton android:id="@+id/buttonTwoDaysOut"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:gravity="center"
+				android:textColor="@color/radio_colors"
+		        android:textAppearance="?android:attr/textAppearanceSmall"
+				android:button="@null"
+		        android:text="@string/button_two_days_out"
+		        android:onClick="setTimeframeToTwoDaysOut" />
+		    		    
+		</com.sebnarware.avalanche.SegmentedRadioGroup>
+	 
+		<ImageButton
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.5"
+		    android:background="#B9B9B9"
+		    android:onClick="onInfoButtonClick"
+		    android:scaleType="center"
+		    android:contentDescription="@string/button_info_content_description"
+		    android:src="@drawable/action_about" />
+		         
+    </LinearLayout>
+
+    <com.google.android.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/linearLayoutTimeframeModeButtons"
+        android:layout_above="@+id/imageviewLegend"
+        android:clickable="true"
+        android:apiKey="@string/map_key_production" />
+    <!-- NOTE be sure to set set the api key above to either map_key_debug or @string/map_key_production map_key_production -->
+    
+    <ImageView
+        android:id="@id/imageviewLegend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:background="#B9B9B9"
+        android:contentDescription="@string/image_view_legend_content_description"
+        android:src="@drawable/legend4" />
+
+
+</RelativeLayout>

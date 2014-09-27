@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Avalanche</string>
+    <string name="activity_main_title">Avalanche Forecasts</string>
+    <string name="button_today">Today</string>
+    <string name="button_tomorrow">Tomorrow</string>
+    <string name="button_two_days_out">2 Days Out</string>
+    <string name="button_info_content_description">Info</string>
+    <string name="button_forecasts">Forecasts</string>
+    <string name="button_submit_obs">Submit Obs</string>
+    <string name="button_donate">Donate</string>
+    <string name="activity_web_view_title">Web View</string>
+    <string name="detailed_forecast_title_format">Detailed Forecast: %1$s</string>
+    <string name="image_view_legend_content_description">Legend</string>
+    <string name="activity_danger_scale_title">Danger Scale</string>
+    <string name="image_view_danger_scale_content_description">Danger Scale</string>
+    <string name="menuitem_info">Info</string>
+    <string name="dialog_info_title">How To Use</string>
+    <string name="dialog_info_message">Each avalanche forecast region is colored based on the overall danger level\n\n- Use the buttons at the top to select the forecast timeframe\n\n- Tap the bottom legend to see descriptions of the danger levels\n\n- Click a region on the map to go to the detailed avalanche forecast\n\nAvalanche Forecasts Android v%1$s</string>
+    <string name="dialog_info_positive_button">OK</string>
+    <string name="dialog_disclaimer_title">Warranty Disclaimer</string>
+    <string name="dialog_disclaimer_message">This product, including all information shown, is provided \'as is\'. Sebnarware makes no warranty or representation of any kind. Sebnarware does not warrant that the product or information is error free, nor that service will be uninterrupted. In no event shall Sebnarware be liable for any damages (including without limitation, where use of the product could lead to death or personal injury).</string>
+    <string name="dialog_disclaimer_positive_button">I Agree</string>
+    <string name="toast_data_fetch_failure">Could not fetch data; is network available?</string>
+    <string name="toast_location_services_disabled">Please enable location services to automatically position the forecast map around your current location</string>
+    <string name="empty"></string>
+    <string name="map_key_debug">0D1jpN2fasf3RQcT5YKirZQl8Ae3En6IWzOqyig</string>
+    <string name="map_key_production">0D1jpN2fasf3kOl7gAs8tSSklsPS1CObMiiqlSg</string>
+    <string name="title_activity_donate">Donate</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="btnIntend">Take Picture</string>
+    <string name="btnIntendS">Take (small) Picture</string>
+    <string name="btnIntendV">Take Video</string>
+    <string name="cannot">Cannot</string>
+    <string name="album_name">ObsPhotos</string>
+
+</resources>

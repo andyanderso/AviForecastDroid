@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="appirater">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/appirater.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
